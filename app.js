@@ -1,6 +1,6 @@
 const projects = [
   { title: "即時互動平台", repo: "cloudes", category: "tools", type: "教學工具", url: "https://laisurjan.github.io/cloudes/", desc: "整合問答、文字雲、投票、量表與排序題，讓全班即時參與並看見彼此的想法。", tags: ["課堂互動", "即時回饋", "多元評量"], accent: "#b7ff57" },
-  { title: "花商教師配課系統", repo: "hlbhteacher", category: "tools", type: "教學工具", url: "https://laisurjan.github.io/hlbhteacher/", desc: "協助整理教師、課程與配課資料，以清楚介面支援校務安排、比較與檢核。", tags: ["校務協作", "資料整理", "教師工具"], accent: "#5eead4" },
+  { title: "花商教師配課系統", repo: "hlbhteacher", category: "tools", type: "教學工具", url: "https://github.com/Laisurjan/hlbhteacher", desc: "協助整理教師、課程與配課資料，以清楚介面支援校務安排、比較與檢核。目前公開原始專案供教師參考。", tags: ["校務協作", "資料整理", "教師工具"], accent: "#5eead4", sourceOnly: true },
   { title: "深度共讀 RIA", repo: "reading", category: "tools", type: "教學工具", url: "https://laisurjan.github.io/reading/", desc: "以 RIA 閱讀策略串連理解、提問與交流，建立可共同思考的深度共讀空間。", tags: ["閱讀策略", "協作學習", "思考鷹架"], accent: "#67e8f9" },
   { title: "學習素材累積", repo: "Learning-Portfolio", category: "tools", type: "教學工具", url: "https://laisurjan.github.io/Learning-Portfolio/", desc: "集中累積與瀏覽學習素材，讓教學歷程與作品不再散落，逐步形成可回看的學習檔案。", tags: ["學習歷程", "素材管理", "作品整理"], accent: "#a7f3d0" },
 
@@ -47,14 +47,14 @@ function render() {
     <article class="project-card" style="--accent:${project.accent};--accent-dark:${colorMix(project.accent,.12)};--accent-glow:${colorMix(project.accent,.2)};animation-delay:${Math.min(index * 35, 280)}ms">
       <div class="preview">
         <div class="preview-fallback" aria-hidden="true">${String(index + 1).padStart(2, "0")}</div>
-        <iframe title="${project.title} 網頁即時預覽" data-src="${project.url}" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        ${project.sourceOnly ? "" : `<iframe title="${project.title} 網頁即時預覽" data-src="${project.url}" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>`}
         <div class="preview-chrome" aria-hidden="true"><i></i><i></i><i></i><span>${new URL(project.url).hostname}</span></div>
         <a class="preview-link" href="${project.url}" target="_blank" rel="noopener" aria-label="開啟 ${project.title}">
-          <span class="open-pill">進入作品 ↗</span>
+          <span class="open-pill">${project.sourceOnly ? "查看專案" : "進入作品"} ↗</span>
         </a>
       </div>
       <div class="card-body">
-        <div class="card-meta"><span>${project.type}</span><span>${project.external ? "EXTERNAL SITE" : `GITHUB / ${project.repo}`}</span></div>
+        <div class="card-meta"><span>${project.type}</span><span>${project.sourceOnly ? "SOURCE PROJECT" : project.external ? "EXTERNAL SITE" : `GITHUB / ${project.repo}`}</span></div>
         <h3>${project.title}</h3>
         <p>${project.desc}</p>
         <div class="tags">${project.tags.map(tag => `<span>${tag}</span>`).join("")}</div>
