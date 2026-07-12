@@ -19,7 +19,7 @@ jobs:
           script: |
             const owner = context.repo.owner;
             const portfolioRepo = context.repo.repo;
-            const excluded = new Set(["money", portfolioRepo]);
+            const excluded = new Set(["money", "hlbhteacher", "teacher", portfolioRepo]);
 
             const source = await github.rest.repos.getContent({
               owner,
