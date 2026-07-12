@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07100e">
+  <meta name="description" content="Laisurjan 教學創新作品庫，收錄互動教學、國語文、跨域探究與生涯素養網頁。">
+  <meta property="og:title" content="Laisurjan｜教學創新作品庫">
+  <meta property="og:description" content="為教師整理的互動教材、教學工具與跨域實作。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://laisurjan.github.io/">
+  <title>Laisurjan｜教學創新作品庫</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#projects">跳到作品列表</a>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="回到首頁">
+      <span class="brand-mark">L</span>
+      <span>LAISURJAN<span class="brand-dot">.LAB</span></span>
+    </a>
+    <nav aria-label="主要導覽">
+      <a href="#projects">作品庫</a>
+      <a href="#about">設計理念</a>
+      <a class="github-link" href="https://github.com/Laisurjan" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> EDUCATION × TECHNOLOGY × LOCALITY</p>
+        <h1 id="hero-title">把教學想法，<br><span>做成可以走進去的體驗。</span></h1>
+        <p class="hero-lead">這裡收錄我為課堂打造的互動教材、學習工具與跨域實作。每個作品都從真實的教學現場出發，邀請教師直接開啟、試用，再帶回自己的課堂。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">探索全部作品 <span>↓</span></a>
+          <a class="button button-ghost" href="https://github.com/Laisurjan" target="_blank" rel="noopener">查看原始專案 ↗</a>
+        </div>
+      </div>
+      <div class="hero-console" aria-label="作品庫摘要">
+        <div class="console-head"><span></span><span></span><span></span><code>portfolio.system</code></div>
+        <div class="console-body">
+          <p><span class="prompt">›</span> audience: <strong>教師 / 教育工作者</strong></p>
+          <p><span class="prompt">›</span> status: <strong class="online">持續更新中</strong></p>
+          <div class="console-grid">
+            <div><strong id="project-count">18</strong><span>件作品</span></div>
+            <div><strong id="category-count">4</strong><span>個主題</span></div>
+            <div><strong>OPEN</strong><span>直接體驗</span></div>
+          </div>
+          <div class="signal" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PROJECT ARCHIVE / 作品索引</p>
+          <h2 id="projects-title">從一個教學需求，長出一種新的學習方式</h2>
+        </div>
+        <p>點選任一預覽即可進入完整網頁</p>
+      </div>
+
+      <div class="controls">
+        <div class="filter-list" role="group" aria-label="依主題篩選">
+          <button class="filter active" type="button" data-filter="all" aria-pressed="true">全部 <span>18</span></button>
+          <button class="filter" type="button" data-filter="tools" aria-pressed="false">教學工具</button>
+          <button class="filter" type="button" data-filter="language" aria-pressed="false">語文人文</button>
+          <button class="filter" type="button" data-filter="inquiry" aria-pressed="false">跨域探究</button>
+          <button class="filter" type="button" data-filter="growth" aria-pressed="false">生涯素養</button>
+        </div>
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <span class="sr-only">搜尋作品</span>
+          <input id="search" type="search" placeholder="搜尋主題、課程或工具…" autocomplete="off">
+          <kbd>/</kbd>
+        </label>
+      </div>
+
+      <p class="results-status" id="results-status" aria-live="polite">顯示全部 18 件作品</p>
+      <div class="project-grid" id="project-grid"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span>⌁</span>
+        <h3>還沒有符合的作品</h3>
+        <p>換個關鍵字，或清除分類條件再看看。</p>
+        <button class="button button-ghost" id="reset-filters" type="button">顯示全部作品</button>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="about-index">01—03</div>
+      <div>
+        <p class="eyebrow">DESIGN PRINCIPLES / 設計理念</p>
+        <h2 id="about-title">科技不是展示品，<br>而是讓學習發生的介面。</h2>
+      </div>
+      <div class="principles">
+        <article><span>01</span><h3>從現場出發</h3><p>回應課堂裡真實的動機、理解與參與問題。</p></article>
+        <article><span>02</span><h3>讓學生動手</h3><p>把抽象知識轉成可操作、可回饋的學習經驗。</p></article>
+        <article><span>03</span><h3>留下可分享的方法</h3><p>讓作品不只服務一堂課，也成為教師交流的起點。</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><span class="brand-mark small">L</span><strong>Laisurjan 教學創新作品庫</strong></div>
+    <p>為真實課堂持續製作、測試與迭代。</p>
+    <a href="#top">回到頂端 ↑</a>
+  </footer>
+</body>
+</html>
