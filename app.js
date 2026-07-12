@@ -8,19 +8,19 @@ const projects = [
   { title: "《郁離子選》互動教學", repo: "yulizi-xuan", category: "language", type: "語文人文", url: "https://yulizi-xuan.vercel.app/", desc: "以圖像化歸納、互動圖解與自學測驗，重新梳理〈魯般〉與〈鄙人學蓋〉的文本思考。", tags: ["古典文學", "互動圖解", "自學複習"], accent: "#fbbf24" },
   { title: "縱谷無言", repo: "silent-valley-hualien", category: "language", type: "語文人文", url: "https://laisurjan.github.io/silent-valley-hualien/outputs/ai_history_learning_exhibit.html", desc: "從花東縱谷重大歷史事件出發，結合 NotebookLM 與三句寫作，走過認識、對照與省思。", tags: ["多元文化", "地方學", "AI 共學"], accent: "#d6d3d1" },
 
-  { title: "花蓮縣災害風險地圖", repo: "hualien-flood-risk-map", category: "inquiry", type: "跨域探究", url: "https://laisurjan.github.io/hualien-flood-risk-map/", desc: "從「記帳」轉向「記災」，用互動地圖閱讀地方風險，連結資料判讀與防災意識。", tags: ["防災教育", "地圖素養", "花蓮"], accent: "#38bdf8" },
-  { title: "曲面鏡與透鏡 3D 實驗室", repo: "mengxi-optics-lab", category: "inquiry", type: "跨域探究", url: "https://laisurjan.github.io/mengxi-optics-lab/", desc: "以 3D 互動操作觀察成像變化，讓抽象光學概念成為可以拖曳、比較與驗證的實驗。", tags: ["自然科學", "3D 模擬", "探究實作"], accent: "#22d3ee" },
-  { title: "說故事學行銷 × 實地詢價", repo: "price-survey", category: "inquiry", type: "跨域探究", url: "https://laisurjan.github.io/price-survey/", desc: "把行銷敘事與實地詢價結合，帶學生從真實市場資料發現價格背後的故事。", tags: ["商業教育", "實地調查", "任務導向"], accent: "#2dd4bf" },
-  { title: "一個你以為你懂的制度", repo: "test-history", category: "inquiry", type: "跨域探究", url: "https://laisurjan.github.io/test-history/", desc: "以問題情境打開制度與歷史的多重視角，邀請學生重新檢視習以為常的理解。", tags: ["歷史思考", "制度探究", "情境學習"], accent: "#818cf8" },
+  { title: "花蓮縣災害風險地圖", repo: "hualien-flood-risk-map", category: "cross", type: "跨域素養", url: "https://laisurjan.github.io/hualien-flood-risk-map/", desc: "從「記帳」轉向「記災」，用互動地圖閱讀地方風險，連結資料判讀與防災意識。", tags: ["防災教育", "地圖素養", "花蓮"], accent: "#38bdf8" },
+  { title: "曲面鏡與透鏡 3D 實驗室", repo: "mengxi-optics-lab", category: "cross", type: "跨域素養", url: "https://laisurjan.github.io/mengxi-optics-lab/", desc: "以 3D 互動操作觀察成像變化，讓抽象光學概念成為可以拖曳、比較與驗證的實驗。", tags: ["自然科學", "3D 模擬", "探究實作"], accent: "#22d3ee" },
+  { title: "說故事學行銷 × 實地詢價", repo: "price-survey", category: "cross", type: "跨域素養", url: "https://laisurjan.github.io/price-survey/", desc: "把行銷敘事與實地詢價結合，帶學生從真實市場資料發現價格背後的故事。", tags: ["商業教育", "實地調查", "任務導向"], accent: "#2dd4bf" },
+  { title: "一個你以為你懂的制度", repo: "test-history", category: "cross", type: "跨域素養", url: "https://laisurjan.github.io/test-history/", desc: "以問題情境打開制度與歷史的多重視角，邀請學生重新檢視習以為常的理解。", tags: ["歷史思考", "制度探究", "情境學習"], accent: "#818cf8" },
 
-  { title: "未來魔法使圖鑑", repo: "magic", category: "growth", type: "生涯素養", url: "https://laisurjan.github.io/magic/", desc: "不看成績，以十二種異世界魔法學派探索能力傾向，開啟輕鬆而有想像力的自我認識。", tags: ["生涯探索", "自我認識", "趣味測驗"], accent: "#c084fc" },
-  { title: "未來魔法使圖鑑・新版", repo: "newmagic", category: "growth", type: "生涯素養", url: "https://laisurjan.github.io/newmagic/", desc: "魔法適性測驗的進化版本，以角色敘事與結果回饋陪學生發現自己的潛在優勢。", tags: ["能力探索", "角色敘事", "測驗"], accent: "#e879f9" },
-  { title: "電玩主角刻板印象 BINGO", repo: "men", category: "growth", type: "生涯素養", url: "https://laisurjan.github.io/men/", desc: "從熟悉的電玩角色切入性別刻板印象，以 BINGO 引發觀察、辨識與對話。", tags: ["性別平等", "媒體識讀", "討論活動"], accent: "#f472b6" },
-  { title: "職場服務大挑戰", repo: "SELgame", category: "growth", type: "生涯素養", url: "https://laisurjan.github.io/SELgame/", desc: "以空服員工作情境進行 SEL 壓力測試，在選擇與回饋中練習情緒調節與服務判斷。", tags: ["SEL", "職場情境", "壓力調適"], accent: "#fb7185" },
+  { title: "未來魔法使圖鑑", repo: "magic", category: "cross", type: "跨域素養", url: "https://laisurjan.github.io/magic/", desc: "不看成績，以十二種異世界魔法學派探索能力傾向，開啟輕鬆而有想像力的自我認識。", tags: ["生涯探索", "自我認識", "趣味測驗"], accent: "#c084fc" },
+  { title: "未來魔法使圖鑑・新版", repo: "newmagic", category: "cross", type: "跨域素養", url: "https://laisurjan.github.io/newmagic/", desc: "魔法適性測驗的進化版本，以角色敘事與結果回饋陪學生發現自己的潛在優勢。", tags: ["能力探索", "角色敘事", "測驗"], accent: "#e879f9" },
+  { title: "電玩主角刻板印象 BINGO", repo: "men", category: "cross", type: "跨域素養", url: "https://laisurjan.github.io/men/", desc: "從熟悉的電玩角色切入性別刻板印象，以 BINGO 引發觀察、辨識與對話。", tags: ["性別平等", "媒體識讀", "討論活動"], accent: "#f472b6" },
+  { title: "職場服務大挑戰", repo: "SELgame", category: "cross", type: "跨域素養", url: "https://laisurjan.github.io/SELgame/", desc: "以空服員工作情境進行 SEL 壓力測試，在選擇與回饋中練習情緒調節與服務判斷。", tags: ["SEL", "職場情境", "壓力調適"], accent: "#fb7185" },
   { title: "好運之島", repo: "lucky-island-game", category: "language", type: "語文人文", url: "https://lucky-island-game.web.app/demo.html", desc: "以島嶼冒險與情境選擇，引導學生走進原住民族的歷史處境，在體驗中理解不同位置與抉擇。", tags: ["原住民族", "處境體驗", "遊戲學習"], accent: "#d59b42", external: true }
 ];
 
-const categoryNames = { all: "全部", tools: "教學工具", language: "語文人文", inquiry: "跨域探究", growth: "生涯素養" };
+const categoryNames = { all: "全部", tools: "教學工具", language: "語文人文", cross: "跨域素養" };
 const grid = document.querySelector("#project-grid");
 const search = document.querySelector("#search");
 const status = document.querySelector("#results-status");
