@@ -1,0 +1,1238 @@
+{
+  "version": "115.10.29",
+  "abilities": {
+    "C1": {
+      "name": "讓人站進別人的處境做選擇",
+      "desc": "扮演一個不是自己的位置，選擇會有代價、結局會有回饋。"
+    },
+    "C2": {
+      "name": "從熟悉的當下搭橋到陌生的文本",
+      "desc": "用學生已經在意的事（留言、電玩、校園情境、奇幻設定）接到古文、制度或議題。"
+    },
+    "C3": {
+      "name": "把看不見的原理做成能動手驗證的模型",
+      "desc": "光學、投影、交通風險、結構性不平等——先預測、再操作、再看結果。"
+    },
+    "C4": {
+      "name": "讓一群人即時看見彼此",
+      "desc": "全班同時輸入，結果即時匯到投影或彼此的手機上。"
+    },
+    "C5": {
+      "name": "把複雜任務拆成能反覆練的步驟",
+      "desc": "閱讀、演說、應用文、訪價、AI 備課——拆成固定流程，練得起來、也量得出來。"
+    },
+    "C6": {
+      "name": "從花蓮的真實場域與資料出發",
+      "desc": "路網、事故點、淹水潛勢、校園噪音、在地超市、縱谷事件——素材是這裡的。"
+    },
+    "C7": {
+      "name": "做出別人能直接接手使用的系統",
+      "desc": "老師登入、開房、名單、成績、匯出——不是 demo，是別的老師明天就能用的東西。"
+    },
+    "C8": {
+      "name": "把做法整理給別人複用",
+      "desc": "講座、分享簡報、公開 repo 的課程設計與工具。"
+    },
+    "C9": {
+      "name": "把文本與脈絡整理成看得見的結構",
+      "desc": "歷史地圖、恩仇簿、制度演變、互動圖解、數位展覽。"
+    }
+  },
+  "formats": {
+    "slides": "全螢幕簡報",
+    "game": "遊戲",
+    "tool": "課堂工具／平台",
+    "sim": "互動模擬",
+    "quiz": "測驗",
+    "reading": "閱讀／展覽"
+  },
+  "domains": [
+    "國文",
+    "歷史",
+    "地理",
+    "物理",
+    "交通安全",
+    "商業",
+    "生涯",
+    "SEL",
+    "性平",
+    "媒體識讀",
+    "原住民族",
+    "地方學",
+    "閱讀",
+    "口語表達",
+    "AI 協作",
+    "教師增能",
+    "學習歷程",
+    "科普"
+  ],
+  "relations": [
+    {
+      "type": "same-lesson",
+      "label": "同一課〈燭之武退秦師〉課前→課後",
+      "from": "jin",
+      "to": "jin-talk"
+    },
+    {
+      "type": "sequel",
+      "label": "續作",
+      "from": "school-commute",
+      "to": "good-traffic"
+    },
+    {
+      "type": "sequel",
+      "label": "改版",
+      "from": "magic",
+      "to": "newmagic"
+    },
+    {
+      "type": "collaborators",
+      "label": "同一組跨校合作",
+      "from": "scales",
+      "to": "redbuilding"
+    },
+    {
+      "type": "same-course",
+      "label": "同一門技高地理課（CH1–CH2）",
+      "members": [
+        "mercator-lab",
+        "taiwan-geoplay",
+        "noise-map",
+        "school-commute",
+        "good-traffic"
+      ]
+    },
+    {
+      "type": "same-method",
+      "label": "同為結構化閱讀流程",
+      "members": [
+        "reading",
+        "hlbh-reading"
+      ]
+    },
+    {
+      "type": "same-method",
+      "label": "同為原住民族歷史處境教材",
+      "members": [
+        "silent-valley",
+        "lucky-island"
+      ]
+    },
+    {
+      "type": "same-method",
+      "label": "同用 OSM 路網與事故開放資料",
+      "members": [
+        "flood-map",
+        "school-commute",
+        "good-traffic"
+      ]
+    }
+  ],
+  "origins": [
+    {
+      "id": "video-converter",
+      "title": "影片格式轉換器",
+      "kind": "desktop",
+      "desc": "給自己用的可攜式轉檔工具，tkinter 介面包 FFmpeg，連改了七個版本的 exe。",
+      "tools": [
+        "python",
+        "tkinter",
+        "ffmpeg"
+      ],
+      "dates": {
+        "created": "2025-03",
+        "updated": "2025-03",
+        "approx": true
+      },
+      "source": "local:G:/我的雲端硬碟/程式設計新手村/設計內容/02.影像轉檔工具",
+      "public": false,
+      "leads_to": []
+    },
+    {
+      "id": "timetable",
+      "title": "全校最新課表查詢",
+      "kind": "web-backend",
+      "desc": "讀學校的 Excel 課表，做成全校教師都能查的網頁；後來加上 GitHub Actions 每天早上六點自動從 Google Drive 同步課表並觸發 Render 重新部署。第一個「別人每天會用」的系統。",
+      "tools": [
+        "python",
+        "flask",
+        "pandas",
+        "gunicorn",
+        "render",
+        "github-actions",
+        "google-drive-api",
+        "google-sheets"
+      ],
+      "dates": {
+        "created": "2025-05-22",
+        "updated": "2025-06-04",
+        "approx": false
+      },
+      "source": "github:hlbhacademy/curriculum / local:C:/program1/my-schedule-app",
+      "public": false,
+      "deploy_note": "曾部署於 Render（部署鉤子在 workflow 裡），目前網址不明、可能已下線；課表含全校教師姓名，公開展示只能用截圖或去識別化範例。",
+      "leads_to": [
+        "C7"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "cloudes",
+      "title": "即時互動平台",
+      "url": "https://laisurjan.github.io/cloudes/",
+      "source": "github:Laisurjan/cloudes",
+      "category": "tools",
+      "format": "tool",
+      "domains": [
+        "教師增能"
+      ],
+      "abilities": [
+        "C4",
+        "C7"
+      ],
+      "tools": [
+        "firebase-firestore",
+        "firebase-auth-google",
+        "xlsx",
+        "localStorage"
+      ],
+      "features": [
+        "問答／文字雲／投票／量表／排序五種題型",
+        "題庫管理、XLSX 匯入匯出",
+        "指定帳號 Google 登入管理",
+        "90 天 TTL"
+      ],
+      "dates": {
+        "created": "2026-02-23",
+        "updated": "2026-02-23",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "reading",
+      "title": "深度共讀 RIA",
+      "url": "https://laisurjan.github.io/reading/",
+      "source": "github:Laisurjan/reading",
+      "category": "tools",
+      "format": "tool",
+      "domains": [
+        "國文",
+        "閱讀"
+      ],
+      "abilities": [
+        "C4",
+        "C5",
+        "C7"
+      ],
+      "tools": [
+        "react",
+        "typescript",
+        "vite",
+        "tailwind",
+        "zustand",
+        "firebase-firestore",
+        "docx-export"
+      ],
+      "features": [
+        "RIA 拆書法三步驟",
+        "老師端即時監控學生進度",
+        "匯出 docx"
+      ],
+      "dates": {
+        "created": "2026-02-26",
+        "updated": "2026-09-16",
+        "approx": false
+      },
+      "notes": "app.js 原寫 GitHub Pages 靜態頁，實際 repo 有 firebase.json／firestore.rules。",
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": []
+    },
+    {
+      "id": "learning-portfolio",
+      "title": "學習素材累積",
+      "url": "https://laisurjan.github.io/Learning-Portfolio/",
+      "source": "github:Laisurjan/Learning-Portfolio",
+      "category": "tools",
+      "format": "tool",
+      "domains": [
+        "學習歷程",
+        "生涯"
+      ],
+      "abilities": [
+        "C5",
+        "C8"
+      ],
+      "tools": [
+        "localStorage",
+        "indexeddb",
+        "pdf-print"
+      ],
+      "features": [
+        "離線優先、無登入、無追蹤",
+        "照片壓縮存 IndexedDB",
+        "單筆匯出 PDF",
+        "附 115 學年高一學習歷程講座簡報"
+      ],
+      "dates": {
+        "created": "2026-05-10",
+        "updated": "2026-05-13",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "gpt-talk",
+      "title": "免費版 GPT 做教學遊戲",
+      "url": "https://laisurjan.github.io/teacher/gpt-talk/",
+      "source": "github:Laisurjan/teacher/gpt-talk",
+      "category": "tools",
+      "format": "slides",
+      "domains": [
+        "AI 協作",
+        "教師增能",
+        "國文"
+      ],
+      "abilities": [
+        "C5",
+        "C8"
+      ],
+      "tools": [
+        "touch-zoom",
+        "visualViewport"
+      ],
+      "features": [
+        "教師社群分享簡報",
+        "三輪追問 vs 整包提示句對照實測",
+        "四個節點，做到哪都能用"
+      ],
+      "dates": {
+        "created": "2026-10-29",
+        "updated": "2026-10-29",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "letter",
+      "title": "應用文：稱謂與題辭",
+      "url": "https://laisurjan.github.io/Letter/",
+      "source": "github:Laisurjan/Letter",
+      "category": "language",
+      "format": "quiz",
+      "domains": [
+        "國文"
+      ],
+      "abilities": [
+        "C5"
+      ],
+      "tools": [
+        "canvas",
+        "localStorage"
+      ],
+      "features": [
+        "題庫闖關、即時判定",
+        "成績卡與彩帶"
+      ],
+      "dates": {
+        "created": "2026-01-08",
+        "updated": "2026-01-08",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "speech-dojo",
+      "title": "即席・演說道場",
+      "url": "https://laisurjan.github.io/speech-dojo/",
+      "source": "github:Laisurjan/speech-dojo",
+      "category": "language",
+      "format": "tool",
+      "domains": [
+        "口語表達",
+        "國文"
+      ],
+      "abilities": [
+        "C5"
+      ],
+      "tools": [
+        "webgl",
+        "canvas",
+        "localStorage"
+      ],
+      "features": [
+        "300 題歷屆真題抽題",
+        "30 分鐘備稿、5–6 分鐘演說計時與扣分模擬",
+        "13579 資料庫、每日任務與成就"
+      ],
+      "dates": {
+        "created": "2026-07-06",
+        "updated": "2026-07-06",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "yulizi-xuan",
+      "title": "《郁離子選》互動教學",
+      "url": "https://yulizi-xuan.vercel.app/",
+      "source": "github:Laisurjan/yulizi-xuan",
+      "category": "language",
+      "format": "reading",
+      "domains": [
+        "國文"
+      ],
+      "abilities": [
+        "C5",
+        "C9"
+      ],
+      "tools": [
+        "nextjs",
+        "react",
+        "typescript",
+        "tailwind",
+        "svg",
+        "vercel"
+      ],
+      "features": [
+        "房屋部件 SVG 互動圖解",
+        "比喻對照表",
+        "自學測驗"
+      ],
+      "dates": {
+        "created": "2026-04-19",
+        "updated": "2026-06-11",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "silent-valley",
+      "title": "縱谷無言",
+      "url": "https://laisurjan.github.io/silent-valley-hualien/outputs/ai_history_learning_exhibit.html",
+      "source": "github:Laisurjan/silent-valley-hualien",
+      "category": "language",
+      "format": "reading",
+      "domains": [
+        "歷史",
+        "原住民族",
+        "地方學",
+        "AI 協作",
+        "國文"
+      ],
+      "abilities": [
+        "C1",
+        "C6",
+        "C8",
+        "C9"
+      ],
+      "tools": [
+        "python",
+        "leaflet",
+        "notebooklm",
+        "pptx-generator",
+        "github-pages"
+      ],
+      "features": [
+        "大港口／大分／七腳川／太魯閣四事件",
+        "三句寫作（事實／差異／省思）",
+        "數位展覽、互動事件地圖、總督的算盤模擬遊戲",
+        "Python 自動產生三週簡報與地圖",
+        "repo 明寫給其他老師參考"
+      ],
+      "local": true,
+      "dates": {
+        "created": "2026-05-07",
+        "updated": "2026-06-17",
+        "approx": false
+      },
+      "notes": "實際是一整個單元的課程包，不只展覽頁；是圖譜裡連線最多的節點之一。",
+      "status": "live",
+      "public": true,
+      "collaborators": []
+    },
+    {
+      "id": "test-history",
+      "title": "一個你以為你懂的制度",
+      "url": "https://laisurjan.github.io/test-history/",
+      "source": "github:Laisurjan/test-history",
+      "category": "language",
+      "format": "slides",
+      "domains": [
+        "國文",
+        "歷史"
+      ],
+      "abilities": [
+        "C2",
+        "C9"
+      ],
+      "tools": [
+        "google-fonts"
+      ],
+      "features": [
+        "12 頁約 25 分鐘",
+        "從世襲、察舉、九品中正到科舉的演變",
+        "第 11 頁翻轉揭示"
+      ],
+      "dates": {
+        "created": "2026-04-08",
+        "updated": "2026-04-08",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "ig",
+      "title": "留言區：傷人與接住",
+      "url": "https://laisurjan.github.io/teacher/ig/",
+      "source": "github:Laisurjan/teacher/ig",
+      "category": "language",
+      "format": "slides",
+      "domains": [
+        "國文",
+        "媒體識讀"
+      ],
+      "abilities": [
+        "C2"
+      ],
+      "tools": [
+        "svg",
+        "auto-fit-text"
+      ],
+      "features": [
+        "真實留言匿名化為 @A–@P",
+        "字級依留言長短自動撐滿投影",
+        "穿插提問頁"
+      ],
+      "dates": {
+        "created": "2026-09-01",
+        "updated": "2026-09-01",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "jin",
+      "title": "名與利：春秋棋局",
+      "url": "https://laisurjan.github.io/teacher/jin/",
+      "source": "github:Laisurjan/teacher/jin",
+      "category": "language",
+      "format": "slides",
+      "domains": [
+        "國文",
+        "歷史"
+      ],
+      "abilities": [
+        "C9"
+      ],
+      "tools": [
+        "svg-map",
+        "geo-projection",
+        "touch-zoom",
+        "visualViewport",
+        "localStorage"
+      ],
+      "features": [
+        "經緯度投影繪製春秋地圖與行軍路線",
+        "逐步揭露、恩仇簿累加",
+        "章節目錄與精簡模式",
+        "自製雙指縮放"
+      ],
+      "dates": {
+        "created": "2026-10-02",
+        "updated": "2026-10-28",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "jin-talk",
+      "title": "說話的棋局",
+      "url": "https://laisurjan.github.io/teacher/jin/talk/",
+      "source": "github:Laisurjan/teacher/jin/talk",
+      "category": "language",
+      "format": "game",
+      "domains": [
+        "國文",
+        "口語表達"
+      ],
+      "abilities": [
+        "C1",
+        "C2",
+        "C7"
+      ],
+      "tools": [
+        "firebase-firestore",
+        "localStorage",
+        "svg"
+      ],
+      "features": [
+        "六個校園情境視覺小說",
+        "對方記得前面說過的話",
+        "關係／目標兩條計分",
+        "學習紀錄上傳供教師檢視"
+      ],
+      "dates": {
+        "created": "2026-10-28",
+        "updated": "2026-10-28",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "scales",
+      "title": "年關：一桿「稱仔」",
+      "url": "https://laisurjan.github.io/teacher/scales/",
+      "source": "github:Laisurjan/teacher/scales",
+      "category": "language",
+      "format": "game",
+      "domains": [
+        "國文",
+        "歷史"
+      ],
+      "abilities": [
+        "C1"
+      ],
+      "tools": [
+        "canvas",
+        "web-audio",
+        "touch",
+        "localStorage"
+      ],
+      "features": [
+        "像素地圖走路擺攤、躲巡警",
+        "錢／身體／骨氣／妻子的心四條狀態",
+        "十三種結局、結局圖鑑跨局保存"
+      ],
+      "collaborators": [
+        "柯貞伊（花蓮高工）"
+      ],
+      "dates": {
+        "created": "2026-10-19",
+        "updated": "2026-10-20",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "notes": ""
+    },
+    {
+      "id": "redbuilding",
+      "title": "大觀園理家記",
+      "url": "https://laisurjan.github.io/teacher/redbuilding/",
+      "source": "github:Laisurjan/teacher/redbuilding",
+      "category": "language",
+      "format": "game",
+      "domains": [
+        "國文"
+      ],
+      "abilities": [
+        "C1",
+        "C7"
+      ],
+      "tools": [
+        "firebase-firestore",
+        "web-audio",
+        "svg",
+        "localStorage"
+      ],
+      "features": [
+        "逐月處理原著事件",
+        "庫銀／體面／人心／告狀四條狀態",
+        "通關解鎖王熙鳳模式",
+        "成績登記"
+      ],
+      "collaborators": [
+        "柯貞伊（花蓮高工）"
+      ],
+      "dates": {
+        "created": "2026-10-17",
+        "updated": "2026-10-20",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "notes": ""
+    },
+    {
+      "id": "mengxi-optics",
+      "title": "曲面鏡與透鏡 3D 實驗室",
+      "url": "https://laisurjan.github.io/mengxi-optics-lab/",
+      "source": "github:Laisurjan/mengxi-optics-lab",
+      "category": "language",
+      "format": "sim",
+      "domains": [
+        "國文",
+        "物理"
+      ],
+      "abilities": [
+        "C3"
+      ],
+      "tools": [
+        "threejs",
+        "webgl",
+        "canvas"
+      ],
+      "features": [
+        "凹凸面鏡、凹凸透鏡四種元件",
+        "物距／焦距／物高滑桿",
+        "操作時即時螢光標出課文字句",
+        "課本平視圖／3D 視角切換"
+      ],
+      "dates": {
+        "created": "2026-06-11",
+        "updated": "2026-06-11",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "flood-map",
+      "title": "花蓮縣災害風險地圖",
+      "url": "https://laisurjan.github.io/hualien-flood-risk-map/",
+      "source": "github:Laisurjan/hualien-flood-risk-map",
+      "category": "cross",
+      "format": "tool",
+      "domains": [
+        "地理",
+        "地方學"
+      ],
+      "abilities": [
+        "C4",
+        "C6"
+      ],
+      "tools": [
+        "leaflet",
+        "osm",
+        "chartjs",
+        "firebase-rtdb",
+        "open-data",
+        "cwa-api",
+        "topojson"
+      ],
+      "features": [
+        "光復鄉村里邊界",
+        "200／350／500／650 mm 四種淹水潛勢圖層（水利署開放資料）",
+        "學生輸入脆弱度、暴露度即時上色",
+        "密碼保護編輯、JSON 匯入匯出"
+      ],
+      "local": true,
+      "dates": {
+        "created": "2026-02-05",
+        "updated": "2026-04-15",
+        "approx": false
+      },
+      "notes": "README 寫 localStorage，程式實際有 Firebase 共用資料與中央氣象署 API。",
+      "status": "live",
+      "public": true,
+      "collaborators": []
+    },
+    {
+      "id": "taiwan-geoplay",
+      "title": "台灣地理探險隊",
+      "url": "https://taiwan-geography-classroom.lailaifamily.chatgpt.site/",
+      "source": "local:C:/0901geography/taiwan-geoplay",
+      "category": "cross",
+      "format": "game",
+      "domains": [
+        "地理"
+      ],
+      "abilities": [
+        "C4",
+        "C7"
+      ],
+      "tools": [
+        "react",
+        "typescript",
+        "vinext",
+        "cloudflare-worker",
+        "d1",
+        "drizzle",
+        "web-audio",
+        "chatgpt-sites",
+        "unit-tests"
+      ],
+      "features": [
+        "45 個真實座標定位題＋45 題地形判讀",
+        "同隊最多 8 支手機即時看見隊友落點",
+        "教師開房、QR 加入、唯讀投影、逐題揭曉",
+        "服務端樂觀鎖、22 項單元測試、HTTP 整合測試",
+        "老師主控原創程式配樂"
+      ],
+      "local": true,
+      "dates": {
+        "created": "2026-09-21",
+        "updated": "2026-09-23",
+        "approx": false
+      },
+      "notes": "花蓮 10 題。尚未開 GitHub repo，程式在本機。",
+      "status": "live",
+      "public": true,
+      "collaborators": []
+    },
+    {
+      "id": "mercator-lab",
+      "title": "地圖實驗室：把地球攤開",
+      "url": "https://mercator-unfold-lab.lailaifamily.chatgpt.site/",
+      "source": "local:C:/0901geography/mercator-lab",
+      "category": "cross",
+      "format": "sim",
+      "domains": [
+        "地理"
+      ],
+      "abilities": [
+        "C3"
+      ],
+      "tools": [
+        "react",
+        "vinext",
+        "3d-animation",
+        "chatgpt-sites"
+      ],
+      "features": [
+        "球體→圓柱→平面三階段投影動畫",
+        "各緯度面積失真表",
+        "先預測再驗證的觀察任務"
+      ],
+      "dates": {
+        "created": "2026-09-07",
+        "updated": "2026-09-07",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "noise-map",
+      "title": "校園噪音地圖",
+      "url": "https://hlbh-noise-map.web.app/",
+      "source": "local:C:/0901geography/noise-map",
+      "category": "cross",
+      "format": "tool",
+      "domains": [
+        "地理"
+      ],
+      "abilities": [
+        "C4",
+        "C6",
+        "C7"
+      ],
+      "tools": [
+        "firebase-firestore",
+        "firebase-auth-google",
+        "mic",
+        "web-audio",
+        "geolocation",
+        "qrcode",
+        "csv-export"
+      ],
+      "features": [
+        "老師／學生／投影三種端",
+        "24 個測量點認養，GPS 檢查",
+        "手機麥克風錄 30 秒",
+        "名冊比對、座號鎖、換手機重新進入",
+        "投影端不含姓名；成績只本人與老師可讀"
+      ],
+      "local": true,
+      "dates": {
+        "created": "2026-09-29",
+        "updated": "2026-10-11",
+        "approx": true
+      },
+      "status": "live",
+      "public": true,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "school-commute",
+      "title": "上學路上",
+      "url": "https://hlbh-commute-game.web.app/",
+      "source": "local:C:/0901geography/school-commute-game",
+      "category": "cross",
+      "format": "game",
+      "domains": [
+        "地理",
+        "交通安全"
+      ],
+      "abilities": [
+        "C3",
+        "C4",
+        "C6",
+        "C7"
+      ],
+      "tools": [
+        "canvas",
+        "firebase-firestore",
+        "qrcode",
+        "osm",
+        "open-data",
+        "dem",
+        "python",
+        "simulation-calibration"
+      ],
+      "features": [
+        "OSM 路網＋roadsafety.tw 114 年事故點＋內政部 20 m DEM 坡度＋警察局取締地點",
+        "2 秒內做決定",
+        "模擬上萬局校準失敗率",
+        "結算對照真實事故統計與最安全路線",
+        "多人安全競賽：老師開班、學生掃碼、投影排行"
+      ],
+      "local": true,
+      "dates": {
+        "created": "2026-10",
+        "updated": "2026-10-29",
+        "approx": true
+      },
+      "status": "live",
+      "public": true,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "good-traffic",
+      "title": "花蓮 Good Traffic Auto",
+      "url": "https://hlbh-good-traffic.web.app/",
+      "source": "github:Laisurjan/hualien-good-traffic (private) / local:C:/0901geography/hualien-ride",
+      "category": "cross",
+      "format": "game",
+      "domains": [
+        "地理",
+        "交通安全"
+      ],
+      "abilities": [
+        "C3",
+        "C6",
+        "C7"
+      ],
+      "tools": [
+        "canvas",
+        "firebase-firestore",
+        "qrcode",
+        "osm",
+        "open-data",
+        "railway-timetable",
+        "python",
+        "simulation-calibration"
+      ],
+      "features": [
+        "3 km 真實街道開放世界、依時段的 NPC 車流",
+        "臺鐵時刻表平交道",
+        "任務線：上學、送便當、趕補習、夜市",
+        "出事重播與「怎麼避免」",
+        "罰單與警察（依路口事故件數）",
+        "老師解鎖關卡、QR 分享、依班級下載成績",
+        "校準：守法 21%、混搭 55%、全違規 83%"
+      ],
+      "local": true,
+      "dates": {
+        "created": "2026-10",
+        "updated": "2026-10-29",
+        "approx": true
+      },
+      "notes": "手機實機未測。GitHub repo 為 private。",
+      "status": "live",
+      "public": true,
+      "collaborators": []
+    },
+    {
+      "id": "price-survey",
+      "title": "說故事學行銷 × 實地詢價",
+      "url": "https://laisurjan.github.io/price-survey/",
+      "source": "github:Laisurjan/price-survey",
+      "category": "cross",
+      "format": "tool",
+      "domains": [
+        "商業"
+      ],
+      "abilities": [
+        "C5",
+        "C6",
+        "C7"
+      ],
+      "tools": [
+        "firebase-firestore",
+        "xlsx"
+      ],
+      "features": [
+        "全聯、花蓮縣農會超市實地訪價",
+        "手機即時填寫學習單、草稿／送出",
+        "老師後台看全班、篩組別",
+        "發布控制：組內互看／全班互看"
+      ],
+      "local": true,
+      "dates": {
+        "created": "2026-03-31",
+        "updated": "2026-04-07",
+        "approx": false
+      },
+      "notes": "app.js 原寫純靜態，實際有 Firebase 後台。",
+      "status": "live",
+      "public": true,
+      "collaborators": []
+    },
+    {
+      "id": "magic",
+      "title": "未來魔法使圖鑑",
+      "url": "https://laisurjan.github.io/magic/",
+      "source": "github:Laisurjan/magic",
+      "category": "cross",
+      "format": "quiz",
+      "domains": [
+        "生涯"
+      ],
+      "abilities": [
+        "C2"
+      ],
+      "tools": [
+        "static"
+      ],
+      "features": [
+        "十二種魔法學派對應能力傾向",
+        "結果卡"
+      ],
+      "dates": {
+        "created": "2025-12-10",
+        "updated": "2025-12-10",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "newmagic",
+      "title": "未來魔法使圖鑑・新版",
+      "url": "https://laisurjan.github.io/newmagic/",
+      "source": "github:Laisurjan/newmagic",
+      "category": "cross",
+      "format": "quiz",
+      "domains": [
+        "生涯"
+      ],
+      "abilities": [
+        "C2"
+      ],
+      "tools": [
+        "canvas"
+      ],
+      "features": [
+        "重設題目流程與計分",
+        "角色敘事回饋"
+      ],
+      "dates": {
+        "created": "2025-12-10",
+        "updated": "2025-12-11",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "men",
+      "title": "電玩主角刻板印象 BINGO",
+      "url": "https://laisurjan.github.io/men/",
+      "source": "github:Laisurjan/men",
+      "category": "cross",
+      "format": "quiz",
+      "domains": [
+        "性平",
+        "媒體識讀"
+      ],
+      "abilities": [
+        "C2"
+      ],
+      "tools": [
+        "localStorage"
+      ],
+      "features": [
+        "可點選賓果格記錄觀察",
+        "完成狀態帶動全班討論"
+      ],
+      "dates": {
+        "created": "2025-12-03",
+        "updated": "2026-10-03",
+        "approx": false
+      },
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": [],
+      "notes": ""
+    },
+    {
+      "id": "selgame",
+      "title": "職場服務大挑戰",
+      "url": "https://laisurjan.github.io/SELgame/",
+      "source": "github:Laisurjan/SELgame",
+      "category": "cross",
+      "format": "game",
+      "domains": [
+        "SEL",
+        "生涯"
+      ],
+      "abilities": [
+        "C1"
+      ],
+      "tools": [
+        "firebase-firestore"
+      ],
+      "features": [
+        "空服員情境選擇",
+        "壓力與服務兩條指標",
+        "匿名排行與成績"
+      ],
+      "dates": {
+        "created": "2025-12-15",
+        "updated": "2025-12-15",
+        "approx": false
+      },
+      "notes": "app.js 原寫純靜態，實際有 Firebase 排行。",
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": []
+    },
+    {
+      "id": "lucky-island",
+      "title": "好運之島",
+      "url": "https://lucky-island-game.web.app/demo.html",
+      "source": "local:C:/Users/godof/lucky-island",
+      "category": "language",
+      "format": "game",
+      "domains": [
+        "原住民族",
+        "歷史"
+      ],
+      "abilities": [
+        "C1",
+        "C3",
+        "C4",
+        "C7"
+      ],
+      "tools": [
+        "firebase-rtdb",
+        "firebase-hosting",
+        "web-audio",
+        "qrcode",
+        "seeded-rng"
+      ],
+      "features": [
+        "兩隊即時多人搶地",
+        "隱藏的不對稱：海洋隊人口上限 20 vs 99，七項政策全部不利",
+        "4 分 30 秒時間軸、揭曉序列",
+        "教師主控台可手動觸發政策",
+        "Web Audio 合成音效，無音檔"
+      ],
+      "dates": {
+        "created": "2026-04-01",
+        "updated": "2026-06-18",
+        "approx": true
+      },
+      "notes": "app.js 原寫 Firebase Hosting，實際核心是 Realtime Database 即時同步。",
+      "status": "live",
+      "public": true,
+      "local": false,
+      "collaborators": []
+    },
+    {
+      "id": "hlbh-reading",
+      "title": "博學冒險：每日短文集卡",
+      "url": "https://hlbh-reading-1151.web.app/",
+      "source": "local:C:/program1/1008reading",
+      "category": "language",
+      "format": "reading",
+      "domains": [
+        "閱讀",
+        "科普",
+        "國文"
+      ],
+      "abilities": [
+        "C5",
+        "C7"
+      ],
+      "tools": [
+        "firebase-firestore",
+        "firebase-auth-google",
+        "node-build",
+        "automated-checks"
+      ],
+      "features": [
+        "80 篇 300–400 字原創短文，每篇標《科學人》出處",
+        "先猜→揭曉→短文→一題→點關鍵詞→一句話→翻卡",
+        "課堂版：圈重點、判讀連接處、難度旋鈕",
+        "兩位老師各自登入、互不見資料",
+        "排程發布、連勝、補做、世界事件、颱風探索日",
+        "115/10/16 學生實際手機使用中"
+      ],
+      "status": "pending",
+      "public": false,
+      "pending_reason": "卡面美術模仿既有遊戲，待製作換過美術風格的展示複本後再公開；學生繼續使用原站。",
+      "dates": {
+        "created": "2026-10-08",
+        "updated": "2026-10-29",
+        "approx": true
+      },
+      "notes": "雲端有學生 email／班級／座號／成績（不含姓名），後台需登入；公開前要確認前台不露出。",
+      "local": false,
+      "collaborators": []
+    }
+  ]
+}
