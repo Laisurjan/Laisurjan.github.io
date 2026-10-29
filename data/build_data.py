@@ -123,32 +123,32 @@ add(id="flood-map", title="花蓮縣災害風險地圖", url="https://laisurjan.
     local=True, dates={"created": "2026-02-05", "updated": "2026-04-15", "approx": False},
     notes="README 寫 localStorage，程式實際有 Firebase 共用資料與中央氣象署 API。")
 
-add(id="taiwan-geoplay", title="台灣地理探險隊", url="https://taiwan-geography-classroom.lailaifamily.chatgpt.site/", source="local:C:/0901geography/taiwan-geoplay",
+add(id="taiwan-geoplay", title="台灣地理探險隊", url="https://taiwan-geography-classroom.lailaifamily.chatgpt.site/", source="local:taiwan-geoplay",
     category="cross", format="game", domains=["地理"], abilities=["C4", "C7"],
     tools=["react", "typescript", "vinext", "cloudflare-worker", "d1", "drizzle", "web-audio", "chatgpt-sites", "unit-tests"],
     features=["45 個真實座標定位題＋45 題地形判讀", "同隊最多 8 支手機即時看見隊友落點", "教師開房、QR 加入、唯讀投影、逐題揭曉", "服務端樂觀鎖、22 項單元測試、HTTP 整合測試", "老師主控原創程式配樂"],
     local=True, dates={"created": "2026-09-21", "updated": "2026-09-23", "approx": False},
     notes="花蓮 10 題。尚未開 GitHub repo，程式在本機。")
 
-add(id="mercator-lab", title="地圖實驗室：把地球攤開", url="https://mercator-unfold-lab.lailaifamily.chatgpt.site/", source="local:C:/0901geography/mercator-lab",
+add(id="mercator-lab", title="地圖實驗室：把地球攤開", url="https://mercator-unfold-lab.lailaifamily.chatgpt.site/", source="local:mercator-lab",
     category="cross", format="sim", domains=["地理"], abilities=["C3"],
     tools=["react", "vinext", "3d-animation", "chatgpt-sites"],
     features=["球體→圓柱→平面三階段投影動畫", "各緯度面積失真表", "先預測再驗證的觀察任務"],
     dates={"created": "2026-09-07", "updated": "2026-09-07", "approx": False})
 
-add(id="noise-map", title="校園噪音地圖", url="https://hlbh-noise-map.web.app/", source="local:C:/0901geography/noise-map",
+add(id="noise-map", title="校園噪音地圖", url="https://hlbh-noise-map.web.app/", source="local:noise-map",
     category="cross", format="tool", domains=["地理"], abilities=["C4", "C6", "C7"],
     tools=["firebase-firestore", "firebase-auth-google", "mic", "web-audio", "geolocation", "qrcode", "csv-export"],
     features=["老師／學生／投影三種端", "24 個測量點認養，GPS 檢查", "手機麥克風錄 30 秒", "名冊比對、座號鎖、換手機重新進入", "投影端不含姓名；成績只本人與老師可讀"],
     local=True, dates={"created": "2026-09-29", "updated": "2026-10-11", "approx": True})
 
-add(id="school-commute", title="上學路上", url="https://hlbh-commute-game.web.app/", source="local:C:/0901geography/school-commute-game",
+add(id="school-commute", title="上學路上", url="https://hlbh-commute-game.web.app/", source="local:school-commute-game",
     category="cross", format="game", domains=["地理", "交通安全"], abilities=["C3", "C4", "C6", "C7"],
     tools=["canvas", "firebase-firestore", "qrcode", "osm", "open-data", "dem", "python", "simulation-calibration"],
     features=["OSM 路網＋roadsafety.tw 114 年事故點＋內政部 20 m DEM 坡度＋警察局取締地點", "2 秒內做決定", "模擬上萬局校準失敗率", "結算對照真實事故統計與最安全路線", "多人安全競賽：老師開班、學生掃碼、投影排行"],
     local=True, dates={"created": "2026-10", "updated": "2026-10-29", "approx": True})
 
-add(id="good-traffic", title="花蓮 Good Traffic Auto", url="https://hlbh-good-traffic.web.app/", source="github:Laisurjan/hualien-good-traffic (private) / local:C:/0901geography/hualien-ride",
+add(id="good-traffic", title="花蓮 Good Traffic Auto", url="https://hlbh-good-traffic.web.app/", source="github:Laisurjan/hualien-good-traffic (private) / local:hualien-ride",
     category="cross", format="game", domains=["地理", "交通安全"], abilities=["C3", "C6", "C7"],
     tools=["canvas", "firebase-firestore", "qrcode", "osm", "open-data", "railway-timetable", "python", "simulation-calibration"],
     features=["3 km 真實街道開放世界、依時段的 NPC 車流", "臺鐵時刻表平交道", "任務線：上學、送便當、趕補習、夜市", "出事重播與「怎麼避免」", "罰單與警察（依路口事故件數）", "老師解鎖關卡、QR 分享、依班級下載成績", "校準：守法 21%、混搭 55%、全違規 83%"],
@@ -187,21 +187,21 @@ add(id="selgame", title="職場服務大挑戰", url="https://laisurjan.github.i
     dates={"created": "2025-12-15", "updated": "2025-12-15", "approx": False},
     notes="app.js 原寫純靜態，實際有 Firebase 排行。")
 
-add(id="lucky-island", title="好運之島", url="https://lucky-island-game.web.app/demo.html", source="local:C:/Users/godof/lucky-island",
+add(id="lucky-island", title="好運之島", url="https://lucky-island-game.web.app/demo.html", source="local:lucky-island",
     category="language", format="game", domains=["原住民族", "歷史"], abilities=["C1", "C3", "C4", "C7"],
     tools=["firebase-rtdb", "firebase-hosting", "web-audio", "qrcode", "seeded-rng"],
     features=["兩隊即時多人搶地", "隱藏的不對稱：海洋隊人口上限 20 vs 99，七項政策全部不利", "4 分 30 秒時間軸、揭曉序列", "教師主控台可手動觸發政策", "Web Audio 合成音效，無音檔"],
     dates={"created": "2026-04-01", "updated": "2026-06-18", "approx": True},
     notes="app.js 原寫 Firebase Hosting，實際核心是 Realtime Database 即時同步。")
 
-add(id="hlbh-reading", title="博學冒險：每日短文集卡", url="https://hlbh-reading-1151.web.app/", source="local:C:/program1/1008reading",
+add(id="hlbh-reading", title="博學冒險：每日短文集卡", url="https://hlbh-reading-1151.web.app/", source="local:1008reading",
     category="language", format="reading", domains=["閱讀", "科普", "國文"], abilities=["C5", "C7"],
     tools=["firebase-firestore", "firebase-auth-google", "node-build", "automated-checks"],
     features=["80 篇 300–400 字原創短文，每篇標《科學人》出處", "先猜→揭曉→短文→一題→點關鍵詞→一句話→翻卡", "課堂版：圈重點、判讀連接處、難度旋鈕", "兩位老師各自登入、互不見資料", "排程發布、連勝、補做、世界事件、颱風探索日", "115/10/16 學生實際手機使用中"],
     status="pending", public=False,
     pending_reason="卡面美術模仿既有遊戲，待製作換過美術風格的展示複本後再公開；學生繼續使用原站。",
     dates={"created": "2026-10-08", "updated": "2026-10-29", "approx": True},
-    notes="雲端有學生 email／班級／座號／成績（不含姓名），後台需登入；公開前要確認前台不露出。")
+    notes="後台含學生成績，需教師登入；公開展示前再確認前台頁面不露出個人資料。")
 
 # 起點：更早期給自己或學校用的工具。不算作品、不掛能力，只出現在時間軸開頭；
 # 03 另以虛線指向 C7，表示「做出別人能用的系統」這條線從這裡開始。
@@ -209,12 +209,12 @@ ORIGINS = [
     {"id": "video-converter", "title": "影片格式轉換器", "kind": "desktop",
      "desc": "給自己用的可攜式轉檔工具，tkinter 介面包 FFmpeg，連改了七個版本的 exe。",
      "tools": ["python", "tkinter", "ffmpeg"], "dates": {"created": "2025-03", "updated": "2025-03", "approx": True},
-     "source": "local:G:/我的雲端硬碟/程式設計新手村/設計內容/02.影像轉檔工具", "public": False, "leads_to": []},
+     "source": "local:02.影像轉檔工具", "public": False, "leads_to": []},
     {"id": "timetable", "title": "全校最新課表查詢", "kind": "web-backend",
      "desc": "讀學校的 Excel 課表，做成全校教師都能查的網頁；後來加上 GitHub Actions 每天早上六點自動從 Google Drive 同步課表並觸發 Render 重新部署。第一個「別人每天會用」的系統。",
      "tools": ["python", "flask", "pandas", "gunicorn", "render", "github-actions", "google-drive-api", "google-sheets"],
      "dates": {"created": "2025-05-22", "updated": "2025-06-04", "approx": False},
-     "source": "github:hlbhacademy/curriculum / local:C:/program1/my-schedule-app", "public": True,
+     "source": "github:hlbhacademy/curriculum / local:my-schedule-app", "public": True,
      "url": "https://schedule-index.onrender.com/",
      "deploy_note": "部署於 Render，115/10/29 確認仍在線上運作；進站需以 hlbh.hlc.edu.tw 的 Google 帳號登入（OAuth 限定網域），校外只看到登入頁，課表內容不外流。",
      "leads_to": ["C7"]},

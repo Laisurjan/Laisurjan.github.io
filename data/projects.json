@@ -144,7 +144,7 @@
         "updated": "2025-03",
         "approx": true
       },
-      "source": "local:G:/我的雲端硬碟/程式設計新手村/設計內容/02.影像轉檔工具",
+      "source": "local:02.影像轉檔工具",
       "public": false,
       "leads_to": []
     },
@@ -168,7 +168,7 @@
         "updated": "2025-06-04",
         "approx": false
       },
-      "source": "github:hlbhacademy/curriculum / local:C:/program1/my-schedule-app",
+      "source": "github:hlbhacademy/curriculum / local:my-schedule-app",
       "public": true,
       "url": "https://schedule-index.onrender.com/",
       "deploy_note": "部署於 Render，115/10/29 確認仍在線上運作；進站需以 hlbh.hlc.edu.tw 的 Google 帳號登入（OAuth 限定網域），校外只看到登入頁，課表內容不外流。",
@@ -781,7 +781,7 @@
       "id": "taiwan-geoplay",
       "title": "台灣地理探險隊",
       "url": "https://taiwan-geography-classroom.lailaifamily.chatgpt.site/",
-      "source": "local:C:/0901geography/taiwan-geoplay",
+      "source": "local:taiwan-geoplay",
       "category": "cross",
       "format": "game",
       "domains": [
@@ -824,7 +824,7 @@
       "id": "mercator-lab",
       "title": "地圖實驗室：把地球攤開",
       "url": "https://mercator-unfold-lab.lailaifamily.chatgpt.site/",
-      "source": "local:C:/0901geography/mercator-lab",
+      "source": "local:mercator-lab",
       "category": "cross",
       "format": "sim",
       "domains": [
@@ -859,7 +859,7 @@
       "id": "noise-map",
       "title": "校園噪音地圖",
       "url": "https://hlbh-noise-map.web.app/",
-      "source": "local:C:/0901geography/noise-map",
+      "source": "local:noise-map",
       "category": "cross",
       "format": "tool",
       "domains": [
@@ -901,7 +901,7 @@
       "id": "school-commute",
       "title": "上學路上",
       "url": "https://hlbh-commute-game.web.app/",
-      "source": "local:C:/0901geography/school-commute-game",
+      "source": "local:school-commute-game",
       "category": "cross",
       "format": "game",
       "domains": [
@@ -946,7 +946,7 @@
       "id": "good-traffic",
       "title": "花蓮 Good Traffic Auto",
       "url": "https://hlbh-good-traffic.web.app/",
-      "source": "github:Laisurjan/hualien-good-traffic (private) / local:C:/0901geography/hualien-ride",
+      "source": "github:Laisurjan/hualien-good-traffic (private) / local:hualien-ride",
       "category": "cross",
       "format": "game",
       "domains": [
@@ -1155,7 +1155,7 @@
       "id": "lucky-island",
       "title": "好運之島",
       "url": "https://lucky-island-game.web.app/demo.html",
-      "source": "local:C:/Users/godof/lucky-island",
+      "source": "local:lucky-island",
       "category": "language",
       "format": "game",
       "domains": [
@@ -1197,7 +1197,7 @@
       "id": "hlbh-reading",
       "title": "博學冒險：每日短文集卡",
       "url": "https://hlbh-reading-1151.web.app/",
-      "source": "local:C:/program1/1008reading",
+      "source": "local:1008reading",
       "category": "language",
       "format": "reading",
       "domains": [
@@ -1231,7 +1231,7 @@
         "updated": "2026-10-29",
         "approx": true
       },
-      "notes": "雲端有學生 email／班級／座號／成績（不含姓名），後台需登入；公開前要確認前台不露出。",
+      "notes": "後台含學生成績，需教師登入；公開展示前再確認前台頁面不露出個人資料。",
       "local": false,
       "collaborators": []
     }
