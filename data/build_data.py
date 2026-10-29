@@ -214,8 +214,9 @@ ORIGINS = [
      "desc": "讀學校的 Excel 課表，做成全校教師都能查的網頁；後來加上 GitHub Actions 每天早上六點自動從 Google Drive 同步課表並觸發 Render 重新部署。第一個「別人每天會用」的系統。",
      "tools": ["python", "flask", "pandas", "gunicorn", "render", "github-actions", "google-drive-api", "google-sheets"],
      "dates": {"created": "2025-05-22", "updated": "2025-06-04", "approx": False},
-     "source": "github:hlbhacademy/curriculum / local:C:/program1/my-schedule-app", "public": False,
-     "deploy_note": "曾部署於 Render（部署鉤子在 workflow 裡），目前網址不明、可能已下線；課表含全校教師姓名，公開展示只能用截圖或去識別化範例。",
+     "source": "github:hlbhacademy/curriculum / local:C:/program1/my-schedule-app", "public": True,
+     "url": "https://schedule-index.onrender.com/",
+     "deploy_note": "部署於 Render，115/10/29 確認仍在線上運作；進站需以 hlbh.hlc.edu.tw 的 Google 帳號登入（OAuth 限定網域），校外只看到登入頁，課表內容不外流。",
      "leads_to": ["C7"]},
 ]
 

@@ -169,8 +169,9 @@
         "approx": false
       },
       "source": "github:hlbhacademy/curriculum / local:C:/program1/my-schedule-app",
-      "public": false,
-      "deploy_note": "曾部署於 Render（部署鉤子在 workflow 裡），目前網址不明、可能已下線；課表含全校教師姓名，公開展示只能用截圖或去識別化範例。",
+      "public": true,
+      "url": "https://schedule-index.onrender.com/",
+      "deploy_note": "部署於 Render，115/10/29 確認仍在線上運作；進站需以 hlbh.hlc.edu.tw 的 Google 帳號登入（OAuth 限定網域），校外只看到登入頁，課表內容不外流。",
       "leads_to": [
         "C7"
       ]
