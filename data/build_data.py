@@ -203,21 +203,13 @@ add(id="hlbh-reading", title="博學冒險：每日短文集卡", url="https://h
     dates={"created": "2026-10-08", "updated": "2026-10-29", "approx": True},
     notes="後台含學生成績，需教師登入；公開展示前再確認前台頁面不露出個人資料。")
 
-# 起點：更早期給自己或學校用的工具。不算作品、不掛能力，只出現在時間軸開頭；
-# 03 另以虛線指向 C7，表示「做出別人能用的系統」這條線從這裡開始。
+# 起點：更早期給自己用的工具。不算作品、不掛能力，只出現在時間軸開頭。
+# 前職務期間建構、綁在校方帳號上的系統不列入（職務產出，不以個人名義認領）。
 ORIGINS = [
     {"id": "video-converter", "title": "影片格式轉換器", "kind": "desktop",
      "desc": "給自己用的可攜式轉檔工具，tkinter 介面包 FFmpeg，連改了七個版本的 exe。",
      "tools": ["python", "tkinter", "ffmpeg"], "dates": {"created": "2025-03", "updated": "2025-03", "approx": True},
      "source": "local:02.影像轉檔工具", "public": False, "leads_to": []},
-    {"id": "timetable", "title": "全校最新課表查詢", "kind": "web-backend",
-     "desc": "讀學校的 Excel 課表，做成全校教師都能查的網頁；後來加上 GitHub Actions 每天早上六點自動從 Google Drive 同步課表並觸發 Render 重新部署。第一個「別人每天會用」的系統。",
-     "tools": ["python", "flask", "pandas", "gunicorn", "render", "github-actions", "google-drive-api", "google-sheets"],
-     "dates": {"created": "2025-05-22", "updated": "2025-06-04", "approx": False},
-     "source": "github:hlbhacademy/curriculum / local:my-schedule-app", "public": True,
-     "url": "https://schedule-index.onrender.com/",
-     "deploy_note": "部署於 Render，115/10/29 確認仍在線上運作；進站需以 hlbh.hlc.edu.tw 的 Google 帳號登入（OAuth 限定網域），校外只看到登入頁，課表內容不外流。",
-     "leads_to": ["C7"]},
 ]
 
 RELATIONS = [
